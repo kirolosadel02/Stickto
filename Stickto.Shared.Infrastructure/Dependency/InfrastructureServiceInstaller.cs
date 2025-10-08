@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Npgsql;
 using Scrutor;
 using Stickto.Shared.Infrastructure.Configurations.Authentication;
 using Stickto.Shared.Infrastructure.Handlers;
@@ -85,7 +86,7 @@ namespace Stickto.Shared.Infrastructure.Dependency
                 (sp, option) =>
                 {
                     // Register the database context
-                    _ = option.UseSqlServer(applicationOptions.ConnectionString, options =>
+                    _ = option.UseNpgsql(applicationOptions.ConnectionString, options =>
                     {
                         _ = options.CommandTimeout(500);
                     });

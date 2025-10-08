@@ -38,12 +38,12 @@ namespace Stickto.Shared.Infrastructure
 
             // Create a DbContextOptionsBuilder and configure it with the connection string
             var builder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            builder.UseSqlServer(connectionString, sqlOptions =>
+            builder.UseNpgsql(connectionString, npgsqlOptions =>
             {
-                sqlOptions.EnableRetryOnFailure(
+                npgsqlOptions.EnableRetryOnFailure(
                     maxRetryCount: 5,
                     maxRetryDelay: TimeSpan.FromSeconds(10),
-                    errorNumbersToAdd: null);
+                    errorCodesToAdd: null);
             });
 
             // Return a new ApplicationDbContext instance
