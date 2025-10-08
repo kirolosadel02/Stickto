@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Stickto.ServiceDefaults\Stickto.ServiceDefaults.csproj" />
     <ProjectReference Include="..\Stickto.Shared.Abstractions\Stickto.Shared.Abstractions.csproj" />
     <ProjectReference Include="..\Stickto.Shared.Infrastructure\Stickto.Shared.Infrastructure.csproj" />
   </ItemGroup>

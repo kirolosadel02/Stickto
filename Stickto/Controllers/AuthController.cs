@@ -8,15 +8,8 @@ namespace Stickto.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AuthController : ControllerBase
+    public class AuthController(IMediator mediator) : ControllerBase
     {
-        private readonly IMediator _mediator;
-
-        public AuthController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
-
         /// <summary>
         /// Registers a new user
         /// </summary>
@@ -31,7 +24,7 @@ namespace Stickto.Controllers
         {
             try
             {
-                var response = await _mediator.Send(command, cancellationToken);
+                var response = await mediator.Send(command, cancellationToken);
                 return Ok(response);
             }
             catch (InvalidOperationException ex)
@@ -54,7 +47,7 @@ namespace Stickto.Controllers
         {
             try
             {
-                var response = await _mediator.Send(query, cancellationToken);
+                var response = await mediator.Send(query, cancellationToken);
                 return Ok(response);
             }
             catch (UnauthorizedAccessException ex)

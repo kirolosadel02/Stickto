@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Sdk Name="Aspire.AppHost.Sdk" Version="9.5.1"/>
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <UserSecretsId>2b76d2b3-20e6-4178-a6d4-d12dbda57796</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Aspire.Hosting.AppHost" Version="9.5.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Stickto.Modules.CartService\Stickto.Modules.CartService.csproj" />
+      <ProjectReference Include="..\Stickto.Modules.OrderService\Stickto.Modules.OrderService.csproj" />
+      <ProjectReference Include="..\Stickto.Modules.PaymentService\Stickto.Modules.PaymentService.csproj" />
+      <ProjectReference Include="..\Stickto.Modules.ProductService\Stickto.Modules.ProductService.csproj" />
+      <ProjectReference Include="..\Stickto.Modules.UserService\Stickto.Modules.UserService.csproj" />
+      <ProjectReference Include="..\Stickto.Shared.Abstractions\Stickto.Shared.Abstractions.csproj" />
+      <ProjectReference Include="..\Stickto.Shared.Infrastructure\Stickto.Shared.Infrastructure.csproj" />
+      <ProjectReference Include="..\Stickto\Stickto.csproj" />
+    </ItemGroup>
+
+</Project>

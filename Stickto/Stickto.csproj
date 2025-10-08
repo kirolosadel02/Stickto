@@ -26,6 +26,7 @@
     <ProjectReference Include="..\Stickto.Modules.PaymentService\Stickto.Modules.PaymentService.csproj" />
     <ProjectReference Include="..\Stickto.Modules.ProductService\Stickto.Modules.ProductService.csproj" />
     <ProjectReference Include="..\Stickto.Modules.UserService\Stickto.Modules.UserService.csproj" />
+    <ProjectReference Include="..\Stickto.ServiceDefaults\Stickto.ServiceDefaults.csproj" />
     <ProjectReference Include="..\Stickto.Shared.Abstractions\Stickto.Shared.Abstractions.csproj" />
     <ProjectReference Include="..\Stickto.Shared.Infrastructure\Stickto.Shared.Infrastructure.csproj" />
   </ItemGroup>

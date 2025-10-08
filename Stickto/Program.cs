@@ -4,8 +4,11 @@ using Stickto.Shared.Infrastructure;
 using Stickto.Shared.Infrastructure.Dependency;
 using Stickto.Shared.Infrastructure.Options.Application;
 using System.IO.Compression;
+using Stickto.ServiceDefaults;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.AddServiceDefaults();
 
 builder.Services.ConfigureOptions<ApplicationOptionsSetup>();
 
@@ -39,6 +42,8 @@ builder.Services
     .AddHttpClient("default");
 
 WebApplication app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 // Seed the database
 using (var scope = app.Services.CreateScope())

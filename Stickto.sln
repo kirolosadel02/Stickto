@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stickto.Shared.Abstractions
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stickto.Shared.Infrastructure", "Stickto.Shared.Infrastructure\Stickto.Shared.Infrastructure.csproj", "{2382BC39-9188-3991-BE55-2636363904B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stickto.AppHost", "Stickto.AppHost\Stickto.AppHost.csproj", "{73F48415-4506-49EC-867F-61E25210D187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stickto.ServiceDefaults", "Stickto.ServiceDefaults\Stickto.ServiceDefaults.csproj", "{00A4A21D-EE6B-4338-8563-FA5F58B38AD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +75,14 @@ Global
 		{2382BC39-9188-3991-BE55-2636363904B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2382BC39-9188-3991-BE55-2636363904B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2382BC39-9188-3991-BE55-2636363904B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73F48415-4506-49EC-867F-61E25210D187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F48415-4506-49EC-867F-61E25210D187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F48415-4506-49EC-867F-61E25210D187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F48415-4506-49EC-867F-61E25210D187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00A4A21D-EE6B-4338-8563-FA5F58B38AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A4A21D-EE6B-4338-8563-FA5F58B38AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A4A21D-EE6B-4338-8563-FA5F58B38AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A4A21D-EE6B-4338-8563-FA5F58B38AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
