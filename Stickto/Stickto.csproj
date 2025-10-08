@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>93553f23-9cf9-4740-b046-3e2066592a1b</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stickto.Modules.CartService\Stickto.Modules.CartService.csproj" />
+    <ProjectReference Include="..\Stickto.Modules.OrderService\Stickto.Modules.OrderService.csproj" />
+    <ProjectReference Include="..\Stickto.Modules.PaymentService\Stickto.Modules.PaymentService.csproj" />
+    <ProjectReference Include="..\Stickto.Modules.ProductService\Stickto.Modules.ProductService.csproj" />
+    <ProjectReference Include="..\Stickto.Modules.UserService\Stickto.Modules.UserService.csproj" />
+    <ProjectReference Include="..\Stickto.Shared.Abstractions\Stickto.Shared.Abstractions.csproj" />
+    <ProjectReference Include="..\Stickto.Shared.Infrastructure\Stickto.Shared.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
