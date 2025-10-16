@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Stickto.Modules.UserService.Domain.Entities;
+using Stickto.Modules.UserService.Domain.Extensions;
 using Stickto.Shared.Infrastructure;
 using System.Security.Cryptography;
 using System.Text;
@@ -36,7 +37,7 @@ namespace Stickto.Modules.UserService.Application.Commands.RegisterUser
                 throw new InvalidOperationException("Invalid role specified.");
             }
 
-            // Hash password
+            // Hash password (required for local auth)
             var hashedPassword = HashPassword(request.Password);
 
             // Create user
@@ -47,9 +48,14 @@ namespace Stickto.Modules.UserService.Application.Commands.RegisterUser
                 LastName = request.LastName,
                 Email = request.Email,
                 Password = hashedPassword,
+                AuthProvider = null, // Local authentication
+                ExternalUserId = null,
                 RoleId = request.RoleId,
                 CreatedOn = DateTime.UtcNow
             };
+
+            // Validate user state before saving
+            user.ValidateUserState();
 
             // Create address
             var address = new Address

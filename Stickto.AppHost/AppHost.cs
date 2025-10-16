@@ -1,19 +1,19 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-builder.AddProject<Projects.Stickto>("stickto");
+builder.AddProject("stickto", "../Stickto/Stickto.csproj");
 
-builder.AddProject<Projects.Stickto_Modules_CartService>("stickto-modules-cartservice");
+builder.AddProject("stickto-modules-cartservice", "../Stickto.Modules.CartService/Stickto.Modules.CartService.csproj");
 
-builder.AddProject<Projects.Stickto_Modules_OrderService>("stickto-modules-orderservice");
+builder.AddProject("stickto-modules-orderservice", "../Stickto.Modules.OrderService/Stickto.Modules.OrderService.csproj");
 
-builder.AddProject<Projects.Stickto_Modules_PaymentService>("stickto-modules-paymentservice");
+builder.AddProject("stickto-modules-paymentservice", "../Stickto.Modules.PaymentService/Stickto.Modules.PaymentService.csproj");
 
-builder.AddProject<Projects.Stickto_Modules_ProductService>("stickto-modules-productservice");
+builder.AddProject("stickto-modules-productservice", "../Stickto.Modules.ProductService/Stickto.Modules.ProductService.csproj");
 
-builder.AddProject<Projects.Stickto_Modules_UserService>("stickto-modules-userservice");
+builder.AddProject("stickto-modules-userservice", "../Stickto.Modules.UserService/Stickto.Modules.UserService.csproj");
 
-builder.AddProject<Projects.Stickto_Shared_Abstractions>("stickto-shared-abstractions");
+builder.AddProject("stickto-shared-abstractions", "../Stickto.Shared.Abstractions/Stickto.Shared.Abstractions.csproj");
 
-builder.AddProject<Projects.Stickto_Shared_Infrastructure>("stickto-shared-infrastructure");
+builder.AddProject("stickto-shared-infrastructure", "../Stickto.Shared.Infrastructure/Stickto.Shared.Infrastructure.csproj");
 
 builder.Build().Run();

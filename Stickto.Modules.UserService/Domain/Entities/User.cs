@@ -12,7 +12,13 @@ namespace Stickto.Modules.UserService.Domain.Entities
 
         public string Email { get; set; } = null!;
 
-        public string Password { get; set; } = null!;
+        public string? Password { get; set; }
+
+        // External authentication provider (e.g., "Google", null for local auth)
+        public string? AuthProvider { get; set; }
+
+        // External provider user ID
+        public string? ExternalUserId { get; set; }
 
         // Foreign Key for Role (one-to-many: role -> users)
         public int RoleId { get; set; }

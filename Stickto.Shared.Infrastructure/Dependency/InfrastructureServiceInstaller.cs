@@ -47,9 +47,11 @@ namespace Stickto.Shared.Infrastructure.Dependency
 
             // Authentication and Authorization
             _ = services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer();
+                .AddJwtBearer()
+                .AddGoogle();
             
             _ = services.ConfigureOptions<ConfigureJwtToken>();
+            _ = services.ConfigureOptions<ConfigureGoogleAuth>();
             _ = services.AddScoped<IJwtTokenService, JwtTokenService>();
 
             _ = services.AddAuthorization(options =>

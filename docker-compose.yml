@@ -20,5 +20,23 @@ services:
       timeout: 10s
       retries: 3
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: stickto-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@stickto.com
+      PGADMIN_DEFAULT_PASSWORD: sticktoadmin
+      PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION: 'False'
+      GUNICORN_LIMIT_REQUEST_FIELD_SIZE: '8190'
+      GUNICORN_LIMIT_REQUEST_FIELDS: '100'
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
 volumes:
   postgres_data:
+  pgadmin_data:

@@ -19,5 +19,10 @@
         /// Gets or sets the configuration settings for a token.
         /// </summary>
         public TokenConfiguration Token { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Google OAuth authentication settings.
+        /// </summary>
+        public GoogleAuthConfiguration GoogleAuth { get; set; }
     }
 }

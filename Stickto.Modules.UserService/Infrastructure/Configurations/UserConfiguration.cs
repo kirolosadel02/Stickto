@@ -31,7 +31,7 @@ namespace Stickto.Modules.UserService.Infrastructure.Configurations
                 .HasMaxLength(255);
 
             builder.Property(u => u.Password)
-                .IsRequired()
+                .IsRequired(false) // Allow null for OAuth users
                 .HasMaxLength(500); // Assuming hashed passwords
 
             builder.Property(u => u.RoleId)
